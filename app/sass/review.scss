@@ -1,0 +1,109 @@
+.review {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 80px 0;
+
+}
+.review__container {
+	padding: 80px 30px;
+	background: linear-gradient(240.09deg, #E8E7FB 0.55%, #ECFFF8 98.84%);
+	border-radius: 20px;	
+	
+}
+.review__slogan {
+	margin-bottom: 80px;
+	color: #2e3450;
+}
+.review__content {
+	position: relative;
+	overflow: hidden;
+}
+.review__scroller{
+	transition: transform 0.3s;
+	display: flex;
+}
+.review__item {
+	flex-shrink: 0;
+	width: 50%;
+	padding-right: 80px;
+}
+.review__header {
+	display: flex;
+	align-items: flex-start;
+}
+.review__avatar {
+	width: 80px;
+	margin-right: 16px;
+}
+.review__name {
+}
+.review__role {
+}
+.review__text {
+}
+.review__buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 80px;
+}
+.review__button {
+	max-width: 500px;
+	width: 100%;
+	height: 100px;
+	border: 2px solid #5B6ED3;
+	box-sizing: border-box;
+	border-radius: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background: none !important;
+	color: #5B6ED3;
+	transition: transform 0.4s;
+
+}
+
+.review__move-left {
+	border: none;
+	background: none;
+	position: relative;
+	padding-right: calc(25px + 16px);
+}
+.review__move-left::after{
+	content: '';
+	background: url('/images/dest/chevron-right.svg') center/contain no-repeat;
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+@media (max-width:1200px) {
+	.review__container{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+@media (max-width: 900px) {
+	.review__item {
+		padding-right: 20px;
+	}
+	
+}
+@media (max-width: 700px) {
+	.review__item {
+		width: 100%;
+	}
+	.review__buttons{
+		flex-direction: column-reverse;
+	}
+	.review__button{
+		margin-top: 48px;
+	}
+	.review__move-left {
+		align-self: flex-end;
+	}
+}

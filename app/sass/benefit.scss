@@ -1,0 +1,119 @@
+.benefit{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+}
+
+.benefit h2{
+    color: #2e3450;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 80%;
+    /* identical to box height, or 48px */
+    margin-bottom: 64px;
+}
+.benefit__list{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 3rem;
+    justify-content: space-between;
+}
+.benefit__list-item{
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(50% - 24px);
+    flex-grow: 1;
+}
+.benefit__list-item:nth-of-type(2n-1){
+    padding-right: 16px;
+}
+.benefit__img{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    
+}
+
+.benfit__img-item{
+    margin-right: 1rem;
+}
+
+
+.benefit__img h3{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+
+.benefit__text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+    color: #5A5A5A;
+
+}
+
+/*Meadia start here*/
+
+@media(max-width: 1200px){
+    .benefit{
+        padding: 50px 10px;
+    }
+}
+@media(max-width: 600px){
+    .benefit h2{
+    font-size: 2rem;
+    }
+
+    .benefit__list{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        // margin: 0 auto;
+    }
+
+    .benefit{
+        // max-width: 1200px;
+        // margin: 0 auto;
+        // padding-top: 80px;
+        padding-bottom: 20px;
+        padding-left: 35px;
+    
+    }
+    .benefit__list-item{
+        padding-bottom: 32px;
+    }
+}
+
+@media(max-width: 400px){
+    .benefit h2{
+        font-size: 1.5rem;
+        }
+
+        .benefit__img h3{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            
+        }
+
+        .benefit__text{
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1rem;
+            color: #5A5A5A;
+            padding-bottom: 32px;
+        
+        }
+
+        
+}

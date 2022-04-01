@@ -1,0 +1,248 @@
+.header{
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    
+    
+}
+ /*toogle nav */
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+    }
+    .nav__btn{
+        font-size: 30px;
+        color: #C75D72;
+    }
+
+    .offcanvas-body{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .offcanvas__item{
+        padding-top: 40px;
+        
+    }
+    .offcanvasRightLogo{
+        width: 100px;
+    }
+    .offcanvas__item a{
+        text-decoration: none;
+        color: #1f222e;
+        font-size: 22px;
+    }
+
+    .offcanvas__item h6{
+       font-size: 22px;
+       padding-top: 10px;
+    }
+
+    .offcanvas__item i{
+        font-size: 20px;
+        color: #675CE9;
+        margin-top: 10px;
+        padding-top: 10px;
+        // line-height: 1.2;
+    }
+    .nav__button{
+       background-color: #675CE9;
+       padding: 15px;
+       border-radius: 20px;
+       border:none;
+       color: #fff;
+       
+    }
+/*toogle nav */
+.header__tape{
+    z-index : -50;
+    position: absolute;
+    right: 0;
+    max-width:50%;
+    bottom:0;
+}
+.header__gradient{
+    position: absolute;
+    left: 0;
+    max-width: 50%;
+    z-index : -50;
+    bottom: 0;
+}
+
+.header__wrapper{
+    margin: 0 auto;
+    margin-top: 50px;
+    max-width:1540px;
+    // border: 1px solid black;
+    
+    
+}
+
+.header__slogan{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 76.69%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #2e3450;
+    margin-bottom: 40px;
+}
+.header__text{
+    margin-bottom: 40px;
+}
+.header__button{
+    width: 260px;
+    height: 80px;
+    color: #fff;
+    margin-left: 20px;
+    border: none;
+    transition: transform 0.4s;
+}
+.header__button:first-of-type{
+    margin-left: 0;
+}
+.header__button:last-child{
+    background: #fff;
+    color: #675CE9;
+    border: 3px solid #675CE9;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+
+.header__screens{
+    // margin: 0 auto;
+    // margin-top: 50px;
+    // position: relative;
+    // // border: 1px solid black;
+    // max-width:500px;
+    display: flex;
+    justify-content: center;
+    // border: 1px solid black;
+    margin-top: 50px;
+}
+.header__screen{
+    // position: absolute;
+    width: 550px;
+    height: 500px;
+    // top: 0px;
+    // box-shadow:0px 4px 50px rgba(0, 0, 0, 0.25);
+    // backdrop-filter: blur(70px);
+    // border-radius: 30px;
+    // border: 1px solid rgb(95, 94, 94);
+    margin: 10px;
+}
+
+.header__screen:last-child{
+    z-index: 200;
+    // position: absolute;
+    width: 550px;
+    height: 500px;
+    top: 100px;
+    right: 150px;
+    // box-shadow:0px 4px 50px rgba(0, 0, 0, 0.25);
+    // backdrop-filter: blur(70px);
+    // border-radius: 30px;
+    // border: 1px solid rgb(95, 94, 94);
+    
+}
+.header__buttons{
+    display: flex;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+/* BUTTON HOVER */
+
+.main__logo{
+    width: 100px;
+}
+/*Meadia start here*/
+@media(max-width: 950px){
+    .header__slogan{
+        font-size: 35px;
+    }
+    .header__button{
+        width: 140px;
+    }
+    .header__tape{
+        z-index : -50;
+        position: absolute;
+        right: 0;
+        max-width: 70%;
+        bottom:0;
+    }
+    .header__gradient{
+        position: absolute;
+        left: 0;
+        max-width: 55%;
+        z-index : -50;
+        bottom: 0;
+    }
+
+
+    .header__screen{
+        width:300px;
+        height: 200px;
+    }
+
+    .header__screen:last-child{
+        width:300px;
+        height: 200px;
+        top: 100px;
+        right: -40px;
+    }
+}
+
+
+@media(max-width: 700px){
+
+    .header__screens{ 
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        
+
+    }
+    .header__screen{
+        width:300px;
+        height: 300px;
+        // left: 20%;
+       
+    }
+
+    .header__screen:last-child{
+        width:200px;
+        height: 200px;
+        top: 100px;
+        right: -40px;
+        display: none;
+    }
+
+}
+
+@media(max-width: 500px){
+    .header__tape{
+        display: none;
+    }
+
+    .header__gradient{
+        position: absolute;
+        left: 0;
+        max-width: 100%;
+        z-index : -50;
+        bottom: 0;
+    }
+    .header__buttons{
+        flex-direction: column;
+    }
+    .header__buttons button{
+       margin: 0;
+       margin-bottom: 16px;
+       max-width: 300px;
+       width: 100vw;
+    }
+}

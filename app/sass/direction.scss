@@ -1,0 +1,101 @@
+.direction{
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    padding: 80px 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    position: relative; 
+}
+.direction__slogan{
+    font-weight: 800;
+    padding-bottom: 32px;
+    color: #2e3450;
+}
+.direction__text{
+    color: #5A5A5A;
+    margin-bottom: 64px;
+}
+.direction__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.direction__card {
+    width: calc(50% - 8px);
+    margin-bottom: 16px;
+    padding: 30px;
+    background: #FFFFFF;
+    border: 2px solid #D3CECE;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.direction__card:last-of-type{
+    font-size: 2rem;
+    color: #D1D1D1;
+
+}
+.direction__card p{
+    color: #5A5A5A;
+
+}
+.direction__card div{
+    flex-grow: 1;
+    flex-basis: calc(100% - 110px);
+    margin-bottom: 40px;
+    margin-right: 10px;
+}
+.direction__card img{
+
+}
+.direction__card button{
+    margin-top: auto;
+    margin-left: auto;
+}
+.direction__card a{
+    align-self: flex-end;
+    color: #675CE9;
+    text-decoration: none;
+}
+
+.direction__button {
+    width: 260px;
+    height: 80px; 
+    color: #fff;
+    margin-left: 20px;
+    border: none;
+    transition: transform 0.4s;
+}
+.active-btn {
+}
+
+/*Meadia start here*/
+
+@media (max-width:1200px) {
+    .direction{
+        padding: 50px 10px;
+    }
+}
+@media (max-width:950px) {
+    .direction__card a{
+        margin-bottom: 100px;
+        width: 100%;
+    }
+    .direction__card img{
+        width: 50px;
+    }
+    .direction__button {
+        width: 100%;
+    }
+}
+@media (max-width:650px) {
+    .direction__card{
+        width: 100%;
+        padding: 30px 20px;
+    }
+    .direction__slogan{
+        word-wrap: break-word;
+    }
+}
