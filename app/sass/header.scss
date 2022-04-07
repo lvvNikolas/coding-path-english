@@ -1,12 +1,13 @@
 .header{
     position: relative;
-    text-align: center;
-    height: 100vh;
-    
+    min-height: 100vh;
+    height: fit-content;
+    overflow: hidden;
     
 }
  /*toogle nav */
     .nav{
+        text-align: center;
         display: flex;
         justify-content: space-between;
         margin: 20px;
@@ -14,6 +15,7 @@
     .nav__btn{
         font-size: 30px;
         color: #C75D72;
+       
     }
 
     .offcanvas-body{
@@ -49,8 +51,8 @@
     }
     .nav__button{
        background-color: #675CE9;
-       padding: 15px;
-       border-radius: 20px;
+       padding: 20px 30px;
+       border-radius: 100px;
        border:none;
        color: #fff;
        
@@ -73,10 +75,13 @@
 
 .header__wrapper{
     margin: 0 auto;
-    margin-top: 50px;
-    max-width:1540px;
+    max-width:1200px;
+    position: relative;
+    height: calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
     // border: 1px solid black;
-    
     
 }
 
@@ -85,14 +90,18 @@
     font-style: normal;
     font-weight: bold;
     font-size: 60px;
-    line-height: 76.69%;
-    text-align: center;
+    line-height:95%;
+    text-align: left;
     letter-spacing: 0.05em;
     color: #2e3450;
     margin-bottom: 40px;
+    max-width: 700px;
+    font-weight: 900;
 }
 .header__text{
     margin-bottom: 40px;
+    max-width: 400px;
+    text-align: left;
 }
 .header__button{
     width: 260px;
@@ -113,87 +122,170 @@
     border-radius: 100px;
 }
 
-.header__screens{
-    // margin: 0 auto;
-    // margin-top: 50px;
-    // position: relative;
-    // // border: 1px solid black;
-    // max-width:500px;
-    display: flex;
-    justify-content: center;
-    // border: 1px solid black;
-    margin-top: 50px;
+.header__img {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    max-width: 700px;
+    max-height: 700px;
+    width: 100vh;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    // transform: translateY(-50%);
 }
-.header__screen{
-    // position: absolute;
-    width: 550px;
-    height: 500px;
-    // top: 0px;
-    // box-shadow:0px 4px 50px rgba(0, 0, 0, 0.25);
-    // backdrop-filter: blur(70px);
-    // border-radius: 30px;
-    // border: 1px solid rgb(95, 94, 94);
-    margin: 10px;
+.header__img-boy {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 100%;
+}
+.header__img-filled-circle {
+    background: linear-gradient(145.72deg, #85FDDD 8.13%, #6E82FC 88.02%);
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    z-index: -1;
+    animation: rotate-inverse 20s linear 0s infinite reverse;
+}
+.header__img-bordered-circle {
+    border:1px solid #675CE9;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: 1;
+    // clip-path: circle(50% at 50% 50%);
+    animation: rotate 20s linear 0s infinite;
+}
+.header__img-circle {
+    position: absolute;
+
+}
+.header__img-circle1 {
+    top: 0;
+    left: 50%;
+    transform: translateY(-50%);
+    animation: rotate-circl1 20s linear 0s infinite reverse;
+}
+.header__img-circle2 {
+    right: 0;
+    top: 50%;
+    transform: translateX(50%);
+    animation: rotate-circl2 20s linear 0s infinite reverse;
+}
+.header__img-circle3 {
+    right: 50%;
+    bottom:0;
+    transform: translateY(50%);
+    animation: rotate-circl3 20s linear 0s infinite reverse;
+}
+.header__img-circle4 {
+    left: 0;
+    bottom:20%;
+    animation: rotate-circlother 20s linear 0s infinite reverse;
+}
+.header__img-circle5 {
+    left: 0;
+    top:10%;
+    animation: rotate-circlother 20s linear 0s infinite reverse;
+}
+.header__img-circle6 {
+    right: 0;
+    bottom:10%;
+    animation: rotate-circlother 20s linear 0s infinite reverse;
 }
 
-.header__screen:last-child{
-    z-index: 200;
-    // position: absolute;
-    width: 550px;
-    height: 500px;
-    top: 100px;
-    right: 150px;
-    // box-shadow:0px 4px 50px rgba(0, 0, 0, 0.25);
-    // backdrop-filter: blur(70px);
-    // border-radius: 30px;
-    // border: 1px solid rgb(95, 94, 94);
-    
-}
+
+
 .header__buttons{
     display: flex;
-    margin: 0 auto;
+    // margin: 0 auto;
     width: fit-content;
 }
 
-/* BUTTON HOVER */
 
 .main__logo{
     width: 100px;
 }
+
+@media (max-width:1200px) {
+    .header__wrapper{
+        padding: 0 10px;
+        padding-top:100px ;
+    }
+    .header__img {
+        max-width: 500px;
+        max-height: 500px;
+    }
+}
 /*Meadia start here*/
 @media(max-width: 950px){
+    .header__wrapper{
+        padding-top: 50px;
+
+    }
     .header__slogan{
-        font-size: 35px;
+        text-align: center;
+        font-size: 55px;
+    }
+    .header__text{
+        text-align: center;
+        max-width: 100%;
+    }
+    .header__buttons{
+       margin: 0 auto;
+    }
+    .header__buttons button{
+        width: 200px;
     }
     .header__button{
         width: 140px;
     }
-    .header__tape{
-        z-index : -50;
-        position: absolute;
-        right: 0;
-        max-width: 70%;
-        bottom:0;
-    }
-    .header__gradient{
-        position: absolute;
-        left: 0;
-        max-width: 55%;
-        z-index : -50;
+    .header__img {
+        position: relative;
+        width: 400px;
+        height: 400px;
         bottom: 0;
+        top: auto;
+        right: auto;
+        transform: translateX(0);
+        margin: 0 auto;
+        flex-shrink: 0;
+        order: -1;
+        margin-bottom: 32px;
     }
-
-
-    .header__screen{
-        width:300px;
-        height: 200px;
+    .header__img-circle1 {
+        width: 50px;
+        height: 50px;
     }
-
-    .header__screen:last-child{
-        width:300px;
-        height: 200px;
-        top: 100px;
-        right: -40px;
+    .header__img-circle2 {
+        width: 45px;
+        height: 45px;
+    }
+    .header__img-circle3 {
+        width: 40px;
+        height: 40px;
+    }
+    .header__img-circle4 {
+        width: 50px;
+        height: 50px;
+    }
+    .header__img-circle5 {
+        width: 40px;
+        height: 40px;
+    }
+    .header__img-circle6 {
+        width: 60px;
+        height: 60px;
     }
 }
 
@@ -207,6 +299,7 @@
         
 
     }
+  
     .header__screen{
         width:300px;
         height: 300px;
@@ -225,24 +318,101 @@
 }
 
 @media(max-width: 500px){
-    .header__tape{
-        display: none;
-    }
+    .header__slogan{
+        background: white;
+        order: -4;
+        font-size: 45px;
+        margin-bottom: 20px;
+        text-align: left;
 
-    .header__gradient{
-        position: absolute;
-        left: 0;
-        max-width: 100%;
-        z-index : -50;
-        bottom: 0;
+    }
+    .header__text{
+        margin-bottom: 20px;
+        background: white;
+        order: -2;
+        text-align: left;
     }
     .header__buttons{
         flex-direction: column;
+        align-items: stretch;
+        width: 100%;
     }
     .header__buttons button{
        margin: 0;
        margin-bottom: 16px;
-       max-width: 300px;
-       width: 100vw;
+       width: 100%;
+    }
+    .header__wrapper{
+        justify-content: space-evenly;
+        padding-top: 10px;
+        min-height: fit-content;
+    }
+    .header__img{
+        position: relative;
+        bottom: auto;
+        order: -3;
+        max-width: 300px;
+        max-height: 300px;
+        margin: 0 auto;
+        transform: translate(0);
+        right: 0;
+        flex-shrink: 0;
+    }
+    .header__img-circle1 {
+        width: 30px;
+        height: 30px;
+    }
+    .header__img-circle2 {
+        width: 25px;
+        height: 25px;
+    }
+    .header__img-circle3 {
+        width: 30px;
+        height: 30px;
+    }
+    .header__img-circle4 {
+        width: 40px;
+        height: 40px;
+    }
+    .header__img-circle5 {
+        width: 25px;
+        height: 25px;
+    }
+    .header__img-circle6 {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+@keyframes rotate {
+    to{
+        transform: translate(50%, -50%) rotate(360deg);
+    }
+}
+@keyframes rotate-inverse {
+    to{
+        transform: translate(50%, -50%) rotate(360deg);
+    }
+}
+@keyframes rotate-circl1 {
+    to{
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+@keyframes rotate-circl2 {
+    to{
+        transform: translateX(50%) rotate(360deg);
+    }
+}
+@keyframes rotate-circl3 {
+    to{
+        transform: translateY(50%) rotate(360deg);
+    }
+}
+
+@keyframes rotate-circlother {
+    to{
+        transform: rotate(360deg);
     }
 }
