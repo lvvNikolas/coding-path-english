@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding path</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/app.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.css"
+        integrity="sha512-kftIhGv/k/oRHmfDRDEb1MxlaWlW4tiz21rx0yNC2zUWM2n4nxRtX1z3Ijmu54he3Yf9sBX4skJaCe3LTJV1rQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="images/dest/favicon.svg" type="image/svg+xml">
+
+</head>
+
+<body>
+    <section class="details">
+        <a href="index.html" class="details__back-btn active-btn"><</a> <div class="details__container">
+                <div class="details__header-img">
+                    <div class="details__figma-bg"></div>
+                    <img src="images/dest/details-design-img.svg" alt="" class="details__header-icon">
+                </div>
+                <div class="details__text">
+                    <h1 class="details__text__header">Course Design in Figma</h1>
+                    <p>Course for future designers. In this direction, we study the basics of design and draw. We create various design projects. On design, we give the guys a base for further development and becoming ui designers.</p>
+                    <hr>
+                    <h2 class="details__text__sub-header">What do we teach?</h2>
+                    <p>First of all, we study the Figma program. This is a modern and relevant software that is used by designers and companies to develop interfaces and create vector graphics. Figma also has the ability to create banners, logos, stickers and work with fonts.
+                        .</p>
+                    <hr>
+                    <h2 class="details__text__sub-header">Your questions</h2>
+                    <p>What do UI designers do? - UI designers create interface designs for programs, websites and applications.
+                        <br>
+                        <br>
+                        What about artistic skills? - Of course, on the design course we draw a lot and get acquainted with the base of any profession related to drawing and design. For example - colors, palettes, perspective, contrast, symmetry, balance, composition. But still, in this course we do not teach children to be artists and do not study art history, painting, etc.
+                        <br>
+                        <br>
+                        What kind of computer do you need? - Figma is accessible directly from the browser, so a basic computer or laptop that can run one of the modern browsers (Opera, Chrome, Yandex) is enough. The main thing is to have a stable Internet connection and a computer mouse. The touchpad will be uncomfortable
+                        <br>
+                        <br>
+                        Do you need a graphics tablet? - Not. To work with Figma, a simple computer mouse is enough.
+                        </p>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="details__reg">
+                <div class="details__reg-container">
+                    <h2>Sign up for classes</h2>
+                    <button class="active-btn detail__reg__button" type="button" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" data-bs-whatever="@fat">Sign up</button>
+                </div>
+            </div>
+    </section>
+    
+
+     <!-- Modal form -->
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Write to us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form" class="form form__modal">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <input type="mail" class="form-control" id="mail" name="email" required placeholder="Email">
+                        </div>
+                        <div class="mb-3">
+                            <input type="phone" class="form-control" id="phone" name="phone" required placeholder="Phone Number">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message-text" name="message-text" placeholder="Comments"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+                    <button type="submit" class="active-btn modal-submit" form="form">Send</button>
+                    <p>By clicking on the button, you consent to the processing of personal data and agree to the offer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal form -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js" integrity="sha512-pY1t/ADgTwbfGbw0+mRGd33EroA5YgRUWhQNFpPIAdBzyoSb38FsFrf4wBTcS3GFPdTfgtpRrbGCkdl2C2OXYA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="scripts/loader.js"></script>
+    <script></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

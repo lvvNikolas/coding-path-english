@@ -1,17 +1,17 @@
 .benefit{
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: #3F4356;
+    color: white;
+}
+.benefit__wrapper{
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 80px;
-    padding-bottom: 80px;
-
 }
-
 .benefit h2{
-    color: #2e3450;
     font-family: Montserrat;
     font-style: normal;
-    font-weight: 800;
-    font-size: 3rem;
+    font-weight:700;
     line-height: 80%;
     /* identical to box height, or 48px */
     margin-bottom: 64px;
@@ -31,6 +31,9 @@
 .benefit__list-item:nth-of-type(2n-1){
     padding-right: 16px;
 }
+.benefit__list-item:nth-of-type(2n){
+    padding-left: 16px;
+}
 .benefit__img{
     display: flex;
     flex-direction: row;
@@ -47,7 +50,6 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
-    font-size: 30px;
     
 }
 
@@ -55,9 +57,6 @@
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.25rem;
-    color: #5A5A5A;
-
 }
 
 /*Meadia start here*/
@@ -78,13 +77,17 @@
         text-align: left;
         // margin: 0 auto;
     }
-
+    .benefit__list-item:nth-of-type(2n-1){
+        padding-right: 0;
+    }
+    .benefit__list-item:nth-of-type(2n){
+        padding-left: 0;
+    }
     .benefit{
         // max-width: 1200px;
         // margin: 0 auto;
         // padding-top: 80px;
         padding-bottom: 20px;
-        padding-left: 35px;
     
     }
     .benefit__list-item{
@@ -93,9 +96,6 @@
 }
 
 @media(max-width: 400px){
-    .benefit h2{
-        font-size: 1.5rem;
-        }
 
         .benefit__img h3{
             font-family: Montserrat;
@@ -110,10 +110,10 @@
             font-style: normal;
             font-weight: normal;
             font-size: 1rem;
-            color: #5A5A5A;
             padding-bottom: 32px;
         
         }
+        
 
         
 }

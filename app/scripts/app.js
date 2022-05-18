@@ -1,4 +1,5 @@
 
+
 // BUTTONS HOVER
 const activeBtn = document.querySelectorAll('.active-btn')
 activeBtn.forEach((e)=>{
@@ -50,32 +51,14 @@ function scroller(){
         scroller.style.transition = 'transform 0.3s'
     })
 }
-scroller()
+//TESTING 
+if(document.title === "Coding-Path международная онлайн школа программирования для детей"){
+    scroller()
+}
+
 //END OF REVIEWS SCRIPT
 
-function sendingCompleteHtml(){
-    let modal = document.querySelector('.modal-content')
-    modal.style.position = 'relative'
-    let element = document.createElement('div')
-    element.innerHTML = `
-        <div class = "sending_body" style = "position:absolute; top:0; left:0; width:100%; height:100%; background:white; border-radius:32px;
-        display:flex; flex-direction:column; justify-content:center; align-items:center; transition: 0.5s">
-            <h3 style = "color:#675CE9;">Аpplication sent</h2>
-            <svg style="margin-top:32px" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="50" fill="#675CE9"/>
-            <path d="M35 46.597L48.6883 62L69 38" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </div>
-    `
-    modal.appendChild(element)
-    setTimeout(()=>{
-        element.querySelector('.sending_body').style.opacity = 0
-    },1000)
 
-    setTimeout(()=>{
-        modal.removeChild(element)
-    },2000)
-}
 
 function dataFromFormToModal(inputs){
     const arr = []
@@ -100,6 +83,33 @@ function recolorActiveQuest(){
     let elements = document.querySelectorAll(".accordion-item")
 }
 recolorActiveQuest()
+
+function sendingCompleteHtml(){
+    let modal = document.querySelector('.modal-content')
+    modal.style.position = 'relative'
+    let element = document.createElement('div')
+    element.innerHTML = `
+        <div class = "sending_body" style = "position:absolute; top:0; left:0; width:100%; height:100%; background:white; border-radius:32px;
+        display:flex; flex-direction:column; justify-content:center; align-items:center; transition: 0.5s">
+            <h3 style = "color:#675CE9;">Заявка отправленна</h2>
+            <svg style="margin-top:32px" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="50" fill="#675CE9"/>
+            <path d="M35 46.597L48.6883 62L69 38" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    `
+    modal.appendChild(element)
+    setTimeout(()=>{
+        element.querySelector('.sending_body').style.opacity = 0
+    },1000)
+
+    setTimeout(()=>{
+        modal.removeChild(element)
+    },2000)
+}
+
+
+
 
 //FORM SEND DATA
 const form = document.getElementById('form')
@@ -126,6 +136,7 @@ async function sendForm(e){
                 // setInterval(()=>{
                 //     form.classList.remove('sendingOk')
                 // },500)
+                sendingCompleteHtml()
             }
         }else{
             console.log(error)
@@ -147,13 +158,102 @@ function validateErrors(form){
      })
      return err;
 }
-function scrollFromHeaderToSecondSection(){
-    const headerMoreBtn = document.querySelectorAll('.header__button')
-    const header = document.querySelector('.header')
 
-    headerMoreBtn[1].addEventListener('click', (e)=>{
-        // Здесь + 20 потому что по мимо высоты самого хедера там у nav есть еще margin 20px который тоже добавляет 20 px к высоте прокрутки
-        window.scroll(0, header.offsetHeight + 20)
-    })
+//ФУНКЦИЯ ДЛЯ СОЗДАНИЯ  РЕКЛМАНЫХ БАННЕРОВ ИЛИ ОБЪЯВЛЕНИЙ НА САЙТЕ
+
+function createBanner(text, pos = "bottom"){
+    //настройки стилей в banner.scss
+  
+    if(document.querySelector('.banner') == null){
+       let bannerContainer = document.createElement('div')
+       bannerContainer.classList.add('banner')
+       pos === "bottom" ? bannerContainer.style.bottom = 0 : bannerContainer.style.top = 0
+       document.querySelector('body').appendChild(bannerContainer) 
+    }
+    // change later
+    let htmlTemplate = `
+        <input type="checkbox" class="bannerVisState" id="bannerVisState">
+        <label for="bannerVisState" class = "bannerLabelState">убрать</label>
+        <div class="banner__content">
+            <h2 class = "banner__slogan">${text}</h2>
+        </div>
+    `
+    if(document.querySelector('.banner') != null){
+        let bannerBody = document.createElement('div')
+        bannerBody.innerHTML = htmlTemplate
+        console.log(bannerBody)
+        document.querySelector('.banner').appendChild(bannerBody)
+    }
 }
-scrollFromHeaderToSecondSection()
+// createBanner("рекламный текст")
+
+const projectLinks = [
+    'https://drony0610.github.io/curiosityv1/',
+    'images/dest/stud-work2.png',
+    'https://todo-app-sample.netlify.app/',
+    'images/dest/stud-work4.png',
+    'https://www.youtube.com/embed/0ZRu086S2-8'
+]
+document.querySelectorAll('.student-works__img').forEach((e,id)=>{
+    e.addEventListener('click', (event)=>{
+        let modalBg = document.querySelector('.student-works__frame__contaner')
+        modalBg.style.display = 'flex'
+        renderIFrameModal(modalBg, projectLinks[id], id)
+    })
+})
+function renderIFrameModal(element, link, id){
+    element.innerHTML = ""
+    element.addEventListener('click',()=>{
+        element.style.display = "none"
+    })
+
+    const frameTemplate = `<iframe src="${link}" frameborder="0" class="student-works-frame"></iframe>`
+    const frameYoutubeTemplate = `<iframe width="80%" height="60%" src="${link}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+    const imgTemplate = `<img src = "${link}" style = "width:80%; height:80%; object-fit:contain;">`
+    const divTemplate = `<div style = "width:80%; height:80%; overflow-y:scroll">
+        <img src = "${link}" style = "width:100%">
+    </div>`
+    element.innerHTML = id === 1 ? imgTemplate : id === 3 ? divTemplate : id === 4 ? frameYoutubeTemplate : frameTemplate
+   
+}
+
+// DRAGGABLE SCROL ON STUDENT WORK SECTION
+
+let mainScrollContainer = document.querySelector('.student-works ')
+
+
+let pos = {
+    left:0,
+    x:0
+}
+
+function dragStartHandler(e){
+    if(e.target.classList != "student-works__img"){
+        this.style.cursor = "grabbing"
+        pos = {
+            //Текущее положение скролла
+            left: this.scrollLeft,
+            //Положение мыши на момент старта
+            x:e.clientX
+        }
+        this.addEventListener('mousemove', dragHandler);
+        this.addEventListener('mouseup', dragEndHandler);
+       
+    }
+}
+
+mainScrollContainer.addEventListener('mousedown', dragStartHandler)
+
+function dragHandler(e){
+    this.style.cursor = "grabbing"
+    //Разница межу координатами после смещения мыши
+    const dynamycX = e.clientX - pos.x
+    this.scrollLeft = pos.left - dynamycX
+}
+function dragEndHandler(e){
+    this.style.cursor = "grab"
+    this.removeEventListener('mousemove', dragHandler)
+    this.removeEventListener('onmouseup',dragEndHandler)
+}
+
+

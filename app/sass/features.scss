@@ -1,15 +1,15 @@
 .features{
     text-align: left;
     position: relative;
-    padding: 80px 0;
+    padding: 120px 0;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 }
 .features__slogan{
     color: #2e3450;
-    font-weight: 800;
-    padding-bottom: 32px;
+    font-weight: 700;
+    // padding-bottom: 24px;
 }
 .features__sub-slogan{
     color: #5A5A5A;
@@ -25,16 +25,18 @@
     'fc5 fc2 fc2'
     'fc5 fc3 fc3'
     ;
-    gap: 16px;
+    gap: 32px;
 }
 .features__card {
-    padding: 30px;
-    border: 2px solid #D3CECE;
-    border-radius: 20px;
-    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    background: #F1F6FB;
+}
+.features__card h3{
+    margin-bottom: 20px;
 }
 .features__card span{
-    color:#21CDB8;
+    color:#28A6DE;
 }
 .features__card1 {
     grid-area: fc1;
@@ -47,12 +49,15 @@
 }
 .features__card4 {
     grid-area: fc4;
-    background: linear-gradient(131.58deg, #D8D5FF 1.42%, #D5FFEF 97.62%);
+    background:url('../images/dest/features-p1.svg') center/cover no-repeat,
+     radial-gradient(24.31% 32.5% at 80.85% 19.83%, #E7A2FF 0%, #B1AAFF 100%);
     border: none;
 }
 .features__card5 {
     grid-area: fc5;
-    background: linear-gradient(193.99deg, #F2F6FF 0%, #FFECF6 102.6%);
+    background: 
+    url('../images/dest/features-p2.svg') top -5px left/cover no-repeat,
+    radial-gradient(74.39% 48.46% at 6.17% 22.48%, #FFF1D5 0%, #F4C8FF 100%);
     border: none;
 }
 
@@ -65,27 +70,28 @@
     .features__wrapper {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3, minmax(300px,auto));
+        grid-template-rows: repeat(6, minmax(300px,auto));
         grid-template-areas:
+        'fc4'
         'fc1'
         'fc2'
         'fc3'
+        'fc5'
+        'fc5'
         ;
     }
-        .features__card4 { 
-           display: none;
-        }
-        .features__card5 {
-            display: none;
-        }
+       
+        // .features__card5 {
+        //     padding: 0;
+        //     background: 
+        //     url('../images/dest/features-p2.svg') right/100% no-repeat,
+        //     radial-gradient(74.39% 48.46% at 6.17% 22.48%, #FFF1D5 0%, #F4C8FF 100%);
+        // }
    
 }
 @media (max-width:400px) {
     .features__card{
         padding: 30px 20px;
     }
-    .features__card h3{
-       word-wrap: break-word;
-       word-break:break-all;
-    }
+   
 }

@@ -1,34 +1,46 @@
 
 
 .form{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 10px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
-
+.landing__form{
+    background:url('../images/dest/form-bg.svg') center/cover no-repeat,
+    #8D46F6;
+}
 .form__slogan{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
     margin-bottom: 64px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
+    font-weight: 700;
     color: #2e3450;
-    line-height: 80%;
-    font-size: 3rem;
+    text-align: left;
 }
 
 .form__wrapper{
     display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: stretch;
     // border: 1px solid black;
 }
 
 .form__item:first-child{
     display: flex;
     flex-direction: column;
-    // border: 1px solid tomato;
-    // max-width:521px;
-    border: 1px solid #D3CECE;
     border-radius: 20px;
     margin-right: 1rem;
+    color: white;
+    justify-content: center;
+    padding-bottom: 100px;
+    margin-right: 40px;
+}
+.form__item:first-child h2{
+    margin-bottom: 32px;
 }
 
 .form__item--first{
@@ -59,10 +71,11 @@
 .form__item:last-child{
     padding: 30px;
     // min-width:663px;
-    background: linear-gradient(99.2deg, #FCEFF9 2.58%, #F3F6FF 100.46%);
+    background: white;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    margin-left: auto;
  
 }
 
@@ -120,19 +133,19 @@
         .form__wrapper{
             display: flex;
             flex-direction: column;
+            align-items: center;
 
       }
 
-      .form__item:first-child{
-        margin-right: 0rem;
-        margin-bottom: 1rem;
-    }
+      .form__item:last-child{
+          margin-left: 0;
+      }
     }
 
     @media (max-width:1200px) {
         .form__wrapper{
-            margin-left: 10px;
-            margin-right:10px ;
+            // margin-left: 10px;
+            // margin-right:10px ;
          }
         
     }
@@ -144,11 +157,13 @@
     }
 
     @media(max-width: 465px){
-      
+        .form__wrapper{
+            margin: 0;
+        }
 
         .form__slogan{
             font-size: 2rem;
-            text-align: center;
+          
         }
         .form__item--span{
             font-size: 1.5rem;

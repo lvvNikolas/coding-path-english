@@ -4,15 +4,15 @@
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    padding: 80px 0;
+    padding: 120px 0;
 }
 
 .questions__slogan{
     color: #2e3450;
-    font-family: 'Roboto',Arial,sans-serif;
     line-height:  1.55;
-    margin-bottom: 32px;
+    // margin-bottom: 32px;
     text-align: left;
+   
 }
 .question__sub-slogan{
     margin-bottom: 64px;
@@ -36,12 +36,12 @@
 
 .accordion-item{
     // margin-bottom: 32px;
-    border-radius: 20px !important;
-    border: 1px solid #D3CECE;
+    border-radius: 30px !important;
+    border: none;
+    background: #F1F6FB;
+    margin-bottom: 30px;
 }
 .accordion-item .accordion-header{
-    background: none;
-    font-size: 2rem;
     background: none;
 }
 
@@ -49,7 +49,7 @@
     text-align: left;
 }
 .accordion-button{
-    font-size: 2rem !important;
+    // font-size: 2rem !important;
     background: none;
 }
 
@@ -90,7 +90,6 @@ button.accordion-button {
 @media(max-width: 620px){
     button.accordion-button {
         line-height: 1;
-        font-size: 20px;
     }
 
 }
