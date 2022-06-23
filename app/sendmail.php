@@ -40,7 +40,8 @@ try {
     $mail->setFrom('sendmailfromitchr@gmail.com', 'Заявка Крусова'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('drony061093@gmail.com');  
+    $mail->addAddress('drony061093@gmail.com');
+    $mail->addAddress('lvvniko7@gmail.com');    
 
 
 // Отправка сообщения
